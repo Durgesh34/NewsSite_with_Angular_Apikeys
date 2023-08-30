@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EInfoComponent } from './e-info.component';
+import { TopheadingComponent } from './topheading.component';
 
-describe('EInfoComponent', () => {
-  let component: EInfoComponent;
-  let fixture: ComponentFixture<EInfoComponent>;
+describe('TopheadingComponent', () => {
+  let component: TopheadingComponent;
+  let fixture: ComponentFixture<TopheadingComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EInfoComponent ]
+      declarations: [ TopheadingComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(EInfoComponent);
+    fixture = TestBed.createComponent(TopheadingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

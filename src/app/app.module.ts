@@ -4,27 +4,30 @@ import { FormsModule } from '@angular/forms';
 import{RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
-import { EInfoComponent } from './e-info/e-info.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-
+import { TopheadingComponent } from './topheading/topheading.component';
+import {HttpClientModule} from '@angular/common/http';
+import {NewsapiserviceService} from './service/newsapiservice.service';
+import { TechnewsComponent } from './technews/technews.component'
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent,
-    EInfoComponent,
-    LoginComponent,
-    HomeComponent
+    TopheadingComponent,
+    TechnewsComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule,
+   LoadingBarHttpClientModule
+
+    
   ],
-  providers: [],
+  providers: [NewsapiserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

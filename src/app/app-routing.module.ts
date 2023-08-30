@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Routes , RouterModule} from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
+import { RouterModule, Routes } from '@angular/router';
+import { TopheadingComponent } from './topheading/topheading.component';
+import { TechnewsComponent } from './technews/technews.component';
 
-const routes:Routes =[
-  {path:'login', component:LoginComponent},
-  {path:'Home',component:HomeComponent}
-]
+const routes: Routes = [
+  { path: '', component: TopheadingComponent },
+  {path:'technews',component:TechnewsComponent}
+];
 
 @NgModule({
-  declarations: [],
   imports: [
-    CommonModule
-  ]
+    RouterModule.forRoot(routes) 
+  ],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
